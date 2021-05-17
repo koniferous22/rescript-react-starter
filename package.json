@@ -1,0 +1,28 @@
+{
+  "name": "rescript-project-template",
+  "version": "0.0.1",
+  "scripts": {
+    "build:js": "rescript",
+    "build:js:watch": "rescript build -w",
+    "build": "npm run build:js && npm run bundle",
+    "bundle": "webpack",
+    "clean": "rescript clean -with-deps",
+    "start:dev": "concurrently --kill-others \"npm run build:js:watch\" \"webpack serve\""
+  },
+  "keywords": [
+    "rescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@rescript/react": "^0.10.3",
+    "rescript": "*"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
